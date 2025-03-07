@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Course Home Page/WDD 231">
+  <meta name="author" content="Fadipe Abiodun Mamiyaa">
+  <title>Course Home Page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%7COpen+Sans">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/profile.webp" alt="Profile Picture">
+    <h1>Abiodun Fadipe</h1>
+    <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chamber.html">Chamber</a></li>
+      <li><a href="https://github.com/abbey-fad" target="_blank">GitHub Profile</a></li>
+      <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>Home</h2>
+    <div class="content-row">
+        <!-- Left Column: Course Work -->
+      <section class="Course-work">
+        <h3>Course Work</h3>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+      <section class="Country">
+        <h3>Ogbomosho, Nigeria</h3>
+        <figure>
+          <img src="images/country.webp" alt="Nigeria Flag">
+          <figcaption>Nigeria Flag</figcaption>
+        </figure>
+      </section>
+      <section class="Certificate">
+        <h3>Web and Computer Programming Certificate</h3>
+        <div class="filter-buttons">
+          <button id="show-all">All</button>
+          <button id="show-cse">CSE</button>
+          <button id="show-wdd">WDD</button>
+        </div>
+        <div class="course-list">
+          <button class="course-btn cse">CSE 110</button>
+          <button class="course-btn wdd">WDD 130</button>
+          <button class="course-btn cse">CSE 111</button>
+          <button class="course-btn cse">CSE 210</button>
+          <button class="course-btn wdd">WDD 131</button>
+          <button class="course-btn wdd">WDD 231</button>
+        </div>
+      </section>
+    </div>  
+  </main>
+    
+  <footer>
+      <p>&copy; 2025 Abiodun Mamiyaa Fadipe Nigeria
+        <img src="images/country.webp" alt="Nigeria Flag">
+      </p>
+      <p id="lastModified">Last Update: 01/01/1970 <script src="scripts/date.js" defer></script>12:00:00</p>
+  </footer>
+</body>
+</html>
