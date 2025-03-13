@@ -1,0 +1,34 @@
+{
+    "familyName": "Fadipe",
+    "moveInDate": "2024-03-01",
+    "numberOfMembers": 5,
+    "visitedByBishopric": true,
+    "familyMembers": [
+      {
+        "name": "John Fadipe",
+        "gender": "Male",
+        "birthdate": "1985-06-15"
+      },
+      {
+        "name": "Jane Fadipe",
+        "gender": "Female",
+        "birthdate": "1987-09-22"
+      },
+      {
+        "name": "Emily Fadipe",
+        "gender": "Female",
+        "birthdate": "2010-05-12"
+      },
+      {
+        "name": "Michael Fadipe",
+        "gender": "Male",
+        "birthdate": "2013-11-30"
+      },
+      {
+        "name": "Sarah Fadipe",
+        "gender": "Female",
+        "birthdate": "2018-07-04"
+      }
+    ]
+  }
+  
