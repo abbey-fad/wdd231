@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of local businesses and organizations in the chamber of commerce.">
+    <meta name="author" content="Abiodun Mamiyaa Fadipe">
+    
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://abbey-fad.github.io/wdd231/chamber/images/">
+    <meta property="og:image:width" content="200">
+  <meta property="og:image:height" content="200">
+  <meta property="og:image:alt" content="logo">
+    <meta property="og:url" content="https://abbey-fad.github.io/wdd231/">
+    
+    <title>Chamber of Commerce Directory</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/directory.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <img src="images/commerce logo.webp" alt="logo">
+        <h1>Chamber of Commerce Directory</h1>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="directory-controls">
+            <button id="grid-view">Grid View</button>
+            <button id="list-view">List View</button>
+        </div>
+    
+        <div id="directory" class="grid"></div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce | Abiodun Mamiyaa Fadipe | WDD 231</p>
+        <p>Contact: info@yourchamber.com | Phone: +123-456-7890</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        // Update last modified date
+        document.getElementById("last-modified").textContent = document.lastModified;
+    </script>
+    <script src="menu.js"></script>
+</body>
+</html>

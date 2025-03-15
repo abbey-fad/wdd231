@@ -1,0 +1,65 @@
+[
+    {
+        "name": "BlueSky Tech Solutions",
+        "address": "123 Innovation Drive, Tech City, TX 75001",
+        "phone": "(123) 456-7890",
+        "website": "https://www.blueskytech.com",
+        "image": "bluesky.png",
+        "membership": 3,
+        "industry": "Technology"
+    },
+    {
+        "name": "GreenLeaf Organic Foods",
+        "address": "456 Market Street, Green Town, CA 90210",
+        "phone": "(987) 654-3210",
+        "website": "https://www.greenleafoods.com",
+        "image": "greenleaf.png",
+        "membership": 2,
+        "industry": "Food & Beverage"
+    },
+    {
+        "name": "Summit Financial Services",
+        "address": "789 Wall Street, Finance City, NY 10005",
+        "phone": "(555) 789-1234",
+        "website": "https://www.summitfinance.com",
+        "image": "summit.png",
+        "membership": 3,
+        "industry": "Financial Services"
+    },
+    {
+        "name": "Elite Auto Repair",
+        "address": "101 Mechanic Lane, Motor City, MI 48201",
+        "phone": "(333) 222-1111",
+        "website": "https://www.eliteautorepair.com",
+        "image": "eliteauto.png",
+        "membership": 1,
+        "industry": "Automotive"
+    },
+    {
+        "name": "Mountain View Resorts",
+        "address": "555 Summit Drive, Adventure Valley, CO 80401",
+        "phone": "(777) 999-5555",
+        "website": "https://www.mountainviewresorts.com",
+        "image": "mountainview.png",
+        "membership": 2,
+        "industry": "Hospitality & Tourism"
+    },
+    {
+        "name": "Sunset Real Estate",
+        "address": "789 Sunset Blvd, Realty Town, FL 33101",
+        "phone": "(888) 555-7890",
+        "website": "https://www.sunsetrealty.com",
+        "image": "sunsetrealty.png",
+        "membership": 1,
+        "industry": "Real Estate"
+    },
+    {
+        "name": "FastTrack Courier Services",
+        "address": "321 Express Lane, Logistics City, IL 60601",
+        "phone": "(444) 666-7777",
+        "website": "https://www.fasttrackcourier.com",
+        "image": "fasttrack.png",
+        "membership": 3,
+        "industry": "Logistics & Transportation"
+    }
+]
