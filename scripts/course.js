@@ -13,13 +13,16 @@ function displayCourses(filterType = "all") {
   const courseListDiv = document.querySelector(".course-list");
   if (!courseListDiv) return;
 
+      // Filter courses based on type
   let filteredCourses = courses;
   if (filterType !== "all") {
       filteredCourses = courses.filter(course => course.type === filterType);
   }
 
+    // Build HTML for course buttons
   let html = "";
   filteredCourses.forEach(course => {
+      // Apply a different CSS class for completed courses
       const completedClass = course.completed ? " completed-course" : "";
       html += `
           <button class="course-btn ${course.type.toLowerCase()}${completedClass}" data-course-id="${course.courseId}">
