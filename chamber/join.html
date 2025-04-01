@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of local businesses and organizations in the chamber of commerce.">
+    <meta name="author" content="Abiodun Mamiyaa Fadipe">
+    
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://abbey-fad.github.io/wdd231/chamber/images/">
+    <meta property="og:image:width" content="200">
+  <meta property="og:image:height" content="200">
+  <meta property="og:image:alt" content="logo">
+    <meta property="og:url" content="https://abbey-fad.github.io/wdd231/">
+    
+    <title>Chamber of Commerce Directory</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/commerce-logo.webp" alt="logo">
+        <h1>Chamber of Commerce Directory</h1>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="thankyou.html" method="get">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required title="Enter your first name" autocomplete="given-name">
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required title="Enter your last name" autocomplete="family-name">
+
+            <label for="organization-title">Organization Title:</label>
+            <input type="text" id="organization-title" name="organization-title" pattern="[A-Za-z\-\s]{7,}" title="Must be at least 7 letters, hyphens, or spaces" autocomplete="organization-title">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required title="Enter a valid email" autocomplete="email" placeholder="example@example.com">
+
+            <label for="phone">Mobile Phone:</label>
+            <input type="tel" id="phone" name="phone" required title="Enter your mobile phone number" autocomplete="tel">
+
+            <label for="organization">Business/Organization Name:</label>
+            <input type="text" id="organization" name="organization" required title="Enter your organization name" autocomplete="organization">
+
+            <label for="membership-level">Membership Level:</label>
+            <select id="membership-level" name="membership-level">
+                <option value="np">NP Membership (Free)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select>
+
+            <label for="description">Business Description:</label>
+            <textarea id="description" name="description" title="Enter a brief description of your business"></textarea>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+            <button type="submit">Submit</button>
+        </form>
+        <div class="membership-cards-container">
+            <!-- Membership Level Cards -->
+            <div class="membership-card show" id="card-np">
+                <h3>NP Membership</h3>
+                <p>No fee</p>
+                <a href="#" onclick="openModal('np-modal')">View Benefits</a>
+            </div>
+            <div class="membership-card show" id="card-bronze">
+                <h3>Bronze Membership</h3>
+                <p>Affordable and great for small businesses</p>
+                <a href="#" onclick="openModal('bronze-modal')">View Benefits</a>
+            </div>
+            <div class="membership-card show" id="card-silver">
+                <h3>Silver Membership</h3>
+                <p>Additional perks for growing businesses</p>
+                <a href="#" onclick="openModal('silver-modal')">View Benefits</a>
+            </div>
+            <div class="membership-card show" id="card-gold">
+                <h3>Gold Membership</h3>
+                <p>Exclusive benefits for established businesses</p>
+                <a href="#" onclick="openModal('gold-modal')">View Benefits</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce | Abiodun Mamiyaa Fadipe | WDD 231</p>
+        <p>Contact: info@yourchamber.com | Phone: +123-456-7890</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        // Update last modified date
+        document.getElementById("last-modified").textContent = document.lastModified;
+    </script>
+    <!-- Modal for NP Membership -->
+    <div class="modal" id="np-modal">
+        <div class="modal-content">
+            <h4>NP Membership Benefits</h4>
+            <p>Special events, networking opportunities, and more.</p>
+            <button onclick="closeModal('np-modal')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Bronze Membership -->
+    <div class="modal" id="bronze-modal">
+        <div class="modal-content">
+            <h4>Bronze Membership Benefits</h4>
+            <p>Discounts on events, advertising, and more.</p>
+            <button onclick="closeModal('bronze-modal')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Silver Membership -->
+    <div class="modal" id="silver-modal">
+        <div class="modal-content">
+            <h4>Silver Membership Benefits</h4>
+            <p>Exclusive advertising opportunities and more.</p>
+            <button onclick="closeModal('silver-modal')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Gold Membership -->
+    <div class="modal" id="gold-modal">
+        <div class="modal-content">
+            <h4>Gold Membership Benefits</h4>
+            <p>Prime advertising position, special events, and more.</p>
+            <button onclick="closeModal('gold-modal')">Close</button>
+        </div>
+    </div>
+</body>
+</html>

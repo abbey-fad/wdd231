@@ -163,3 +163,60 @@ async function getSpotlightMembers() {
 
 // Call function when the page loads
 getSpotlightMembers();
+
+document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified").textContent = document.lastModified;
+
+    // Function to get query parameters from the URL
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            firstName: params.get('first-name'),
+            lastName: params.get('last-name'),
+            email: params.get('email'),
+            phone: params.get('phone'),
+            organization: params.get('organization'),
+            timestamp: params.get('timestamp')
+        };
+    }
+
+    // Populate the thank you page with the form data
+    window.onload = function() {
+        const data = getQueryParams();
+        document.getElementById("first-name").textContent = data.firstName;
+        document.getElementById("last-name").textContent = data.lastName;
+        document.getElementById("email").textContent = data.email;
+        document.getElementById("phone").textContent = data.phone;
+        document.getElementById("organization").textContent = data.organization;
+        document.getElementById("timestamp").textContent = data.timestamp;
+    };
+
+// When the page is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current date and time
+    const currentDate = new Date();
+
+    // Format the date in a readable format
+    const formattedDate = currentDate.toLocaleString();
+
+    // Set the timestamp span to show the current date
+    document.getElementById("timestamp").textContent = formattedDate;
+});
+
+// Form submission (if you have a form)
+document.querySelector('#registration-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent form submission if necessary
+
+    // Get the current date and time
+    const currentDate = new Date();
+    
+    // Format the date in a readable way
+    const formattedDate = currentDate.toLocaleString();
+
+    // Set the timestamp element's text to the current date and time
+    document.getElementById("timestamp").textContent = formattedDate;
+
+    // Submit the form if necessary after setting the timestamp
+    event.target.submit();
+});
+
