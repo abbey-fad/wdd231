@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Mountain View Rafting",
+    "address": "123 Rapids Lane, Jackson, WY 83001",
+    "description": "Experience thrilling whitewater rafting through scenic mountain canyons."
+  },
+  {
+    "name": "River Bend Outfitters",
+    "address": "456 River Rd, Boise, ID 83702",
+    "description": "Guided rafting trips for beginners and experts on the Snake River."
+  },
+  {
+    "name": "Wild Waters Rafting Co.",
+    "address": "789 Cascade Way, Denver, CO 80202",
+    "description": "High-adventure rafting tours through the most challenging rapids in Colorado."
+  },
+  {
+    "name": "Big Sky Adventures",
+    "address": "101 Rapids Blvd, Missoula, MT 59802",
+    "description": "Family-friendly rafting trips with breathtaking views of the Montana wilderness."
+  },
+  {
+    "name": "Canyon Explorers",
+    "address": "202 Canyon Dr, Moab, UT 84532",
+    "description": "Explore the red rock canyons with guided rafting and kayaking tours."
+  },
+  {
+    "name": "Thunder Rapids Expeditions",
+    "address": "303 Whitewater Ave, Sacramento, CA 95814",
+    "description": "California’s premier rafting experience, featuring Class IV and V rapids."
+  },
+  {
+    "name": "Eagle River Adventures",
+    "address": "404 Rapids Run, Asheville, NC 28801",
+    "description": "Enjoy a mix of excitement and relaxation on North Carolina’s most scenic rivers."
+  },
+  {
+    "name": "Glacier Creek Rafting",
+    "address": "505 Glacier St, Anchorage, AK 99501",
+    "description": "Raft through icy waters and take in stunning views of Alaskan glaciers."
+  }
+]

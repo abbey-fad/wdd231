@@ -1,0 +1,162 @@
+/* 🔹 Global Styles */
+:root {
+    --primary-color: #004080; /* Replace with your primary color */
+    --secondary-color: #0080ff; /* Replace with your secondary color */
+    --background-color: #f4f4f4; /* Replace with your background color */
+    --text-color: #333; /* Replace with your text color */
+    --button-hover: #002d5a; /* Darker shade for hover effect */
+    --font-family: 'Arial', sans-serif; /* Replace with your font */
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+header img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav button#menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hide by default */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/* 🔹 Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* 🔹 Grid Layout for Places */
+.grid-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 30px;
+}
+
+.place-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.place-card img {
+    width: 100%;
+    height: auto;
+}
+
+.place-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.place-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* 🔹 Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    .directory-controls {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--primary-color);
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 1rem 0;
+    }
+
+    nav button#menu-toggle {
+        display: block;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}  
+
+@media (min-width: 769px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }    
+}
+

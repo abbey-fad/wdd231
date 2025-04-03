@@ -220,3 +220,58 @@ document.querySelector('#registration-form').addEventListener('submit', function
     event.target.submit();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const gridContainer = document.querySelector(".grid-container");
+
+    // Fetch places.json
+    fetch("data/places.json")
+        .then(response => response.json())
+        .then(data => {
+            displayPlaces(data); // FIX: No ".items", use "data" directly
+        })
+        .catch(error => console.error("Error loading places.json:", error));
+
+    function displayPlaces(places) {
+        gridContainer.innerHTML = ""; // Clear previous content
+        places.forEach(place => {
+            const card = document.createElement("div");
+            card.classList.add("place-card");
+
+            card.innerHTML = `
+                <img src="${place.image ? place.image : 'placeholder.jpg'}" alt="${place.name}">
+                <h3>${place.name}</h3>
+                <p><strong>Location:</strong> ${place.address}</p>
+                <p>${place.description}</p>
+            `;
+
+            gridContainer.appendChild(card);
+        });
+    }
+});
+
+// Check for last visit date and display the message
+const lastVisit = localStorage.getItem('lastVisit');
+const currentDate = new Date();
+const sidebarMessage = document.getElementById('sidebar-message');
+
+if (sidebarMessage) { // Ensure the element exists
+    if (lastVisit) {
+        const lastVisitDate = new Date(parseInt(lastVisit));
+        const timeDifference = Math.floor((currentDate - lastVisitDate) / (1000 * 3600 * 24)); // in days
+
+        let message = '';
+        if (timeDifference === 0) {
+            message = 'Back so soon! Awesome!';
+        } else if (timeDifference === 1) {
+            message = 'You last visited 1 day ago.';
+        } else {
+            message = `You last visited ${timeDifference} days ago.`;
+        }
+        sidebarMessage.textContent = message;
+    } else {
+        sidebarMessage.textContent = 'Welcome! Let us know if you have any questions.';
+    }
+}
+
+// Store the current visit date
+localStorage.setItem('lastVisit', currentDate.getTime());
