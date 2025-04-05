@@ -1,4 +1,5 @@
-/* 🔹 Global Styles */
+@media (min-width: 1025px) {
+    /* 🔹 Global Styles */
 :root {
     --primary-color: #004080; /* Replace with your primary color */
     --secondary-color: #0080ff; /* Replace with your secondary color */
@@ -60,6 +61,7 @@ nav ul li a {
     color: white;
     font-weight: bold;
 }
+}    
 
 main {
     padding: 20px;
@@ -68,52 +70,55 @@ main {
     background-color: white;
 }
 
-/* 🔹 Hero Section */
-.hero {
-    text-align: center;
-    margin-bottom: 20px;
-}
 
-.hero h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-}
-
-/* 🔹 Grid Layout for Places */
-.grid-container {
+#allplaces {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    margin-top: 30px;
+    grid-template-columns: 1fr 1fr;
 }
 
-.place-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+#allplaces {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.place-card img {
+#allplaces div {
+    grid-template-areas: 
+    "photograph name"
+    "photograph description"
+    "photograph location";
+}
+
+#allplaces div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+}
+
+#allplaces div img {
     width: 100%;
-    height: auto;
+    grid-area: photograph;
 }
 
-.place-card {
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+#allplaces div p {
+    margin: 1rem 10px;
+    grid-area: description;
 }
 
-.place-card:hover {
-    transform: scale(1.05);
+#allplaces div address {
+    margin: 1rem 10px;
+    grid-area: location;
 }
 
+
+#allplaces div img {
+    width: 300px;
+}
+#sidebar {
+    background-color: #f0f8ff;
+    padding: 1rem;
+    border-left: 3px solid #007acc;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
 
 /* 🔹 Footer */
 footer {
@@ -121,42 +126,5 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
+    
 }
-
-/* 🔹 Responsive Design */
-@media (max-width: 768px) {
-    .directory-controls {
-        flex-direction: column;
-        max-width: 90%;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        background-color: var(--primary-color);
-        width: 100%;
-        left: 0;
-        top: 60px;
-        padding: 1rem 0;
-    }
-
-    nav button#menu-toggle {
-        display: block;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
-    }
-}  
-
-@media (min-width: 769px) {
-    .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }    
-}
-

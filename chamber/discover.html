@@ -17,8 +17,9 @@
     <title>Discover Nigeria</title>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/discover.css">
-    <script src="scripts/directory.js" defer></script>
+    <link rel="stylesheet" href="styles/discover-small.css">
+    <link rel="stylesheet" href="styles/discover-medium.css">
+    <link rel="stylesheet" href="styles/discover-large.css">
 </head>
 <body>
     <header>
@@ -29,26 +30,22 @@
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="discover.html" class="active">Discover</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Discover Iconic Places in Nigeria</h2>
-            <img src="images/hero-image.jpg" alt="Nigeria Landmarks">
-        </section>
+        <h1>Fun Places in Nigeria</h1>
+        <div id="allplaces"></div>
 
-        <h2>Famous Places in Nigeria</h2>
-        
-        <!-- Grid Container for Places -->
-        <div class="grid-container">
-            <!-- Dynamic Cards Will Be Added Here -->
-        </div>
+        <aside id="sidebar">
+            <!-- Visit message will go here -->
+        </aside>
+          
     </main>
+
 
     <footer>
         <p>&copy; <span id="year"></span> Chamber of Commerce | Abiodun Mamiyaa Fadipe | WDD 231</p>
@@ -56,6 +53,11 @@
         <p>Last modified: <span id="last-modified"></span></p>
     </footer>
 
-    <script src="scripts/directory.js" defer></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        // Update last modified date
+        document.getElementById("last-modified").textContent = document.lastModified;
+    </script>
+    <script src="scripts/discover.js" type="module"></script>
 </body>
 </html>
