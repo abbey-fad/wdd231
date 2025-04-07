@@ -1,77 +1,122 @@
-import { places } from '../data/places.mjs';
+// Data for the places
+const places = [
+    {
+        "name": "Osun Osogbo Sacred Grove",
+        "address": "Osogbo, Osun State, Nigeria",
+        "description": "A UNESCO World Heritage site and sacred grove dedicated to the goddess of fertility, Osun.",
+        "photo_link": "osun-osogbo-sacred-grove.webp"
+    },
+    {
+        "name": "National Museum, Lagos",
+        "address": "Awolowo Rd, Lagos, Nigeria",
+        "description": "A museum showcasing Nigeria's rich cultural heritage and history.",
+        "photo_link": "national-museum-lagos.webp"
+    },
+    {
+        "name": "Kainji National Park",
+        "address": "New Bussa, Niger State, Nigeria",
+        "description": "A national park home to various wildlife, including elephants, lions, and hippos.",
+        "photo_link": "kainji-national-park.webp"
+    },
+    {
+        "name": "Benin City National Museum",
+        "address": "Benin City, Edo State, Nigeria",
+        "description": "A museum showcasing the history and culture of the Benin Empire.",
+        "photo_link": "benin-city-national-museum .webp"
+    },
+    {
+        "name": "Olumo Rock",
+        "address": "Abeokuta, Ogun State, Nigeria",
+        "description": "A historic rock formation and tourist attraction.",
+        "photo_link": "olumo-rock.webp"
+    },
+    {
+        "name": "Yankari Game Reserve",
+        "address": "Bauchi, Bauchi State, Nigeria",
+        "description": "A game reserve home to various wildlife, including elephants, lions, and buffalo.",
+        "photo_link": "yankari-game-reserve.webp"
+    },
+    {
+        "name": "Nike Art Gallery",
+        "address": "Lagos, Nigeria",
+        "description": "A gallery showcasing Nigerian art and culture.",
+        "photo_link": "nike-art-gallery.webp"
+    },
+    {
+        "name": "Erin Ijesha Waterfalls",
+        "address": "Erin Ijesha, Osun State, Nigeria",
+        "description": "A scenic waterfall and tourist attraction.",
+        "photo_link": "erin-ijesha-waterfalls.webp"
+    }
+];
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log(places);
+// Function to display places
+function displayPlaces() {
+    const allplaces = document.getElementById('allplaces');
+    
+    places.forEach(place => {
+        const thecard = document.createElement('div');
+        thecard.classList.add('place-card'); // Optional: Add a class for styling
 
-    const showHere = document.querySelector("#allplaces");
+        // Create the image element
+        const thephoto = document.createElement('img');
+        thephoto.src = `images/${place.photo_link}`;
+        thephoto.alt = place.name;
+        thecard.appendChild(thephoto);
 
-    function displayItems(places) {
-        places.forEach(x => {
-            const thecard = document.createElement('div');
-            const thephoto = document.createElement('img');
+        // Create the title element (h2)
+        const thetitle = document.createElement('h2');
+        thetitle.innerText = place.name;
+        thecard.appendChild(thetitle);
 
-            thephoto.src = `images/${x.photo_link}`;
-            thephoto.alt = x.name;
-            thecard.appendChild(thephoto);
+        // Create the address element (address)
+        const theaddress = document.createElement('address');
+        theaddress.innerText = place.address;
+        thecard.appendChild(theaddress);
 
-            const thetitle = document.createElement('h2');
-            thetitle.innerText = x.name;
-            thecard.appendChild(thetitle);
+        // Create the description element (p)
+        const thedesc = document.createElement('p');
+        thedesc.innerText = place.description;
+        thecard.appendChild(thedesc);
 
-            const theaddress = document.createElement('address');
-            theaddress.innerText = x.address;
-            thecard.appendChild(theaddress);
+        // Optionally, add a button or link to learn more
+        const learnMoreButton = document.createElement('button');
+        learnMoreButton.innerText = 'Learn More';
+        thecard.appendChild(learnMoreButton);
 
-            const thedesc = document.createElement('p');
-            thedesc.innerText = x.description;
-            thecard.appendChild(thedesc);
+        // Add the card to the 'allplaces' div
+        allplaces.appendChild(thecard);
+    });
+}
 
-            showHere.appendChild(thecard);
-        });
+// Function to check last visit and show appropriate message
+function checkLastVisit() {
+    const lastVisit = localStorage.getItem('lastVisit');
+    const currentDate = new Date();
+    const timeDiff = lastVisit ? (currentDate - new Date(lastVisit)) / (1000 * 3600 * 24) : 0;
+    let message = "Welcome! Let us know if you have any questions.";
+
+    if (timeDiff > 0 && timeDiff <= 7) {
+        message = `Welcome back! You last visited ${Math.round(timeDiff)} day(s) ago.`;
+    } else if (timeDiff > 7) {
+        message = `It's been more than a week since your last visit. Welcome back!`;
     }
 
-    displayItems(places);
+    // Show the message in the sidebar
+    document.getElementById('sidebar').textContent = message;
 
-    // --- Sidebar Visit Message ---
-    const sidebar = document.querySelector("#sidebar");
-    const now = new Date();
-    const lastVisit = localStorage.getItem("lastVisit");
+    // Update the last visit time in localStorage
+    localStorage.setItem('lastVisit', currentDate.toISOString());
+}
 
-    function getDaysBetween(date1, date2) {
-        const msPerDay = 1000 * 60 * 60 * 24;
-        const diffTime = date2 - date1;
-        return Math.floor(diffTime / msPerDay);
-    }
+// Menu toggle functionality
+const menuToggleButton = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
 
-    let message = "";
-
-    if (!lastVisit) {
-        message = "Welcome! Let us know if you have any questions.";
-    } else {
-        const previousVisit = new Date(lastVisit);
-        const daysBetween = getDaysBetween(previousVisit, now);
-
-        if (daysBetween < 1) {
-            message = "Back so soon! Awesome!";
-        } else if (daysBetween === 1) {
-            message = "You last visited 1 day ago.";
-        } else {
-            message = `You last visited ${daysBetween} days ago.`;
-        }
-    }
-
-    sidebar.innerHTML = `<p>${message}</p>`;
-    localStorage.setItem("lastVisit", now.toString());
-
-    // Hamburger menu
-    const menuToggle = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
-
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-    } else {
-        console.error("Menu toggle or navigation menu not found!");
-    }
+menuToggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
+
+// Call the functions on load
+displayPlaces();
+checkLastVisit();

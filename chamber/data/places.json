@@ -1,0 +1,52 @@
+{
+    "cards": [
+        {
+            "name": "Osun Osogbo Sacred Grove",
+            "address": "Osogbo, Osun State, Nigeria",
+            "description": "A UNESCO World Heritage site and sacred grove dedicated to the goddess of fertility, Osun.",
+            "photo_link": "osun-osogbo-sacred-grove.webp"
+        },
+        {
+            "name": "National Museum, Lagos",
+            "address": "Awolowo Rd, Lagos, Nigeria",
+            "description": "A museum showcasing Nigeria's rich cultural heritage and history.",
+            "photo_link": "national-museum-lagos.webp"
+        },
+        {
+            "name": "Kainji National Park",
+            "address": "New Bussa, Niger State, Nigeria",
+            "description": "A national park home to various wildlife, including elephants, lions, and hippos.",
+            "photo-link" : "kainji-national-park.webp"
+        },
+        {
+            "name": "Benin City National Museum",
+            "address": "Benin City, Edo State, Nigeria",
+            "description": "A museum showcasing the history and culture of the Benin Empire.",
+            "photo_link": "benin-city-national-museum .webp"
+        },
+        {
+            "name": "Olumo Rock",
+            "address": "Abeokuta, Ogun State, Nigeria",
+            "description": "A historic rock formation and tourist attraction.",
+            "photo-link": "olumo-rock.webp"
+        },
+        {
+            "name": "Yankari Game Reserve",
+            "address": "Bauchi, Bauchi State, Nigeria",
+            "description": "A game reserve home to various wildlife, including elephants, lions, and buffalo.",
+            "photo-link": "yankari-game-reserve.webp"
+        },
+        {
+            "name": "Nike Art Gallery",
+            "address": "Lagos, Nigeria",
+            "description": "A gallery showcasing Nigerian art and culture.",
+            "photo-link": "nike-art-gallery.webp"
+        },
+        {
+            "name": "Erin Ijesha Waterfalls",
+            "address": "Erin Ijesha, Osun State, Nigeria",
+            "description": "A scenic waterfall and tourist attraction.",
+            "photo-link": "erin-ijesha-waterfalls.webp"
+        }
+    ]
+  }

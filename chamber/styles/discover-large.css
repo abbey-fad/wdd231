@@ -76,11 +76,6 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 
-#allplaces {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 #allplaces div {
     grid-template-areas: 
     "photograph name"
