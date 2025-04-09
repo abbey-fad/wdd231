@@ -144,7 +144,7 @@ footer {
         grid-area: description;
     }
     
-    #allplaces div address {
+    #allplaces div span {
         margin: 1rem 10px;
         grid-area: location;
     }

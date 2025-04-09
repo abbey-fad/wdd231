@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome to Eleazar Omoade's Sneakers and More Store. Browse the latest in footwear and more!" />
+    
+    <meta property="og:title" content="Eleazer Sneakers and More Store" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Browse the latest in footwear and more!" />
+    <meta property="og:image" content="images/preview.jpg" />
+    <meta property="og:url" content="https://abbey-fad.github.io/wdd231/project/index.html" />
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+    <meta property="og:locale" content="en_US">
+    <meta property="fb:app_id" content="1958129384712131">
+  
+    <title>Eleazer Omoade Sneakers and More | Contact Us</title>
+  
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/omoade.css" />
+    <script src="scripts/contact.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+          <img src="images/logo.webp" alt="Eleazer Omoade Sneakers & More Logo" />
+      </div>
+      <div class="store-name">
+          <h1>Eleazer Omoade Sneakers & More</h1>
+      </div>
+      <nav id="main-nav">
+          <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+          <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <main>
+      <section class="contact-form-section">
+          <h2>Contact Us</h2>
+          <form action="thankyou.html" method="get">
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="first-name" required title="Enter your first name" autocomplete="given-name">
+  
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last-name" required title="Enter your last name" autocomplete="family-name"> 
+  
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required title="Enter a valid email" autocomplete="email" placeholder="example@example.com">
+  
+              <label for="phone">Mobile Phone:</label>
+              <input type="tel" id="phone" name="phone" required title="Enter your mobile phone number" autocomplete="tel">
+  
+              <label for="date">Date (dd/mm/yyyy):</label>
+              <input type="date" id="date" name="date" required title="Enter date" autocomplete="date">
+  
+              <label for="message">Message:</label>
+              <select id="membership-level" name="membership-level">
+                  <option value="gi">General Inquiry</option>
+                  <option value="services">Services</option>
+                  <option value="product">Product</option>
+                  <option value="design">Design</option>
+              </select>
+  
+              <button type="submit">Submit</button>
+          </form>
+      </section>
+    </main>
+  <footer>
+    <p>&copy; <span id="year"></span> Sneakers and More | <a href="attributions.html">Attributions</a></p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+
+  <script>
+    // Set the current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Set the last modified date
+    const lastModified = document.lastModified;
+    document.getElementById("last-modified").textContent = lastModified;
+  </script>
+</body>
+</html>

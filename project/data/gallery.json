@@ -1,0 +1,40 @@
+{
+    "cards": [
+         {
+            "name": "Slide1",
+            "price": "#8,000",
+            "description": "Size 42.",
+            "photo_link": "slide1.webp"
+          },
+          {
+            "name": "Sneaker 2",
+            "price": "$129.99",
+            "description": "Stylish sneaker with premium materials.",
+            "image": "images/product2.jpg"
+          },
+          {
+            "name": "Sneaker 3",
+            "price": "$89.99",
+            "description": "Affordable yet durable sneaker.",
+            "image": "images/product3.jpg"
+          },
+          {
+            "name": "Sneaker 4",
+            "price": "$109.99",
+            "description": "Sporty and comfortable for any workout.",
+            "image": "images/product4.jpg"
+          },
+          {
+            "name": "Sneaker 5",
+            "price": "$159.99",
+            "description": "Luxury sneaker with a sleek design.",
+            "image": "images/product5.jpg"
+          },
+          {
+            "name": "Sneaker 6",
+            "price": "$159.99",
+            "description": "Luxury sneaker with a sleek design.",
+            "image": "images/product5.jpg"
+          }
+    ]
+  }

@@ -70,7 +70,7 @@ function displayPlaces() {
         thecard.appendChild(thetitle);
 
         // Create the address element (address)
-        const theaddress = document.createElement('address');
+        const theaddress = document.createElement('span');
         theaddress.innerText = place.address;
         thecard.appendChild(theaddress);
 
