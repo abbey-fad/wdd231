@@ -79,11 +79,6 @@ function displayPlaces() {
         thedesc.innerText = place.description;
         thecard.appendChild(thedesc);
 
-        // Optionally, add a button or link to learn more
-        const learnMoreButton = document.createElement('button');
-        learnMoreButton.innerText = 'Learn More';
-        thecard.appendChild(learnMoreButton);
-
         // Add the card to the 'allplaces' div
         allplaces.appendChild(thecard);
     });
