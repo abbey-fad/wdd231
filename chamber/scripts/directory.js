@@ -9,19 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.error("Menu toggle or navigation menu not found!");
     }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
-
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-    } else {
-        console.error("Menu toggle or navigation menu not found!");
-    }
 
     const gridButton = document.getElementById("grid-view");
     const listButton = document.getElementById("list-view");
