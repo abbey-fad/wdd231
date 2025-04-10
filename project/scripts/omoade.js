@@ -29,7 +29,7 @@ function displayProducts(products) {
         productList.appendChild(productItem);
     });
 
-    displayProduct();
+    displayProducts();
  
     // Add event listener for product buttons
     const buttons = document.querySelectorAll('.product-item button');

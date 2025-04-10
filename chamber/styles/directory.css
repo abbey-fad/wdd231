@@ -79,8 +79,9 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin: 20px auto;
+    margin: 1rem 0;
 }
+
 
 .directory-controls button {
     padding: 0.75rem 1.5rem;
@@ -94,42 +95,52 @@ main {
 
 #grid-view {
     background-color: var(--primary-color);
-    color: white;
 }
 
 #grid-view:hover {
     background-color: var(--button-hover);
-    transform: scale(1.05);
 }
 
 #list-view {
     background-color: var(--secondary-color);
-    color: white;
 }
 
 #list-view:hover {
     background-color: #0066cc;
+}
+
+#grid-view, #list-view {
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
     transform: scale(1.05);
+
+}
+
+#grid-view.active, #list-view.active {
+    background-color: var(--primary-color); /* Highlight active button */
+    color: white;
 }
 
 /* 🔹 Directory Section */
-#directory {
+#directory.grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     padding: 1rem;
-    justify-content: center;
 }
 
-/* 📌 Grid View (Default) */
-.grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
 
 /* 📌 List View */
-.list {
+#directory.list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
 }
 
 .member-card {
@@ -169,11 +180,6 @@ footer {
 
 /* 🔹 Responsive Design */
 @media (max-width: 768px) {
-    .directory-controls {
-        flex-direction: column;
-        max-width: 90%;
-    }
-
     nav ul {
         display: none;
         flex-direction: column;
@@ -198,14 +204,14 @@ footer {
         max-width: 90%;
     }
 
-    #directory {
+    #directory-grid {
         grid-template-columns: 1fr; /* Single column on smaller screens */
     }
 }  
     
 
 @media (min-width: 769px) {
-    #directory {
+    #directory-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }    
 }

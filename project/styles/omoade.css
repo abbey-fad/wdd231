@@ -338,28 +338,43 @@ button:hover {
   background-color: #69210b;
 }
 
+/* 🔹 Thank You Section */
 .form-data-section {
-  padding: 4rem;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-h2 {
-  font-size: 1.5rem;
+.form-data-section h2 {
+  color: var(--primary-color);
 }
 
 .form-results p {
-  font-size: 1.1rem;
-  padding: 1rem;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.form-results span {
+  font-weight: normal;
 }
 
 .button {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  background-color: #ff7043;
+  display: inline-block;
+  background-color: var(--primary-color);
   color: white;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
   font-weight: bold;
-  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: var(--button-hover);
 }
 
 footer {
@@ -399,13 +414,43 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 
-  .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr;
+  * {
+    box-sizing:border-box
   }
-  .gallery-item {
-      padding: 0.8rem; /* Adjust padding for mobile */
-  }
+
+#allgallerys div {
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "photograph"
+    "description"
+    "price";
+}
+
+#allgallerys div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+}
+
+#allgallerys div img {
+    width: 100%;
+    grid-area: photograph;
+}
+
+#allgallerys div p {
+    margin: 1rem 10px;
+    grid-area: description;
+}
+
+#allgallerys div span {
+    margin: 1rem 10px;
+    grid-area: price;
+}
 
   .contact-form-section {
       padding: 1rem;
@@ -456,13 +501,47 @@ footer a:hover {
       padding: 1rem;
   }
   
-  .gallery-grid {
-      grid-template-columns: repeat(2, 1fr); /* Two columns grid */
+  * {
+    box-sizing:border-box
   }
 
-  .gallery-item {
-      padding: 1rem; /* Adjust padding for tablet */
-  }
+
+#allgallerys div {
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: 
+    "photograph name"
+    "photograph description"
+    "photograph price";
+} 
+
+#allgallerys div img {
+    width: 300px;
+}  
+
+#allgallerys div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+}
+
+#allgallerys div img {
+    width: 100%;
+    grid-area: photograph;
+}
+
+#allgallerys div p {
+    margin: 1rem 10px;
+    grid-area: description;
+}
+
+#allgallerys div span {
+    margin: 1rem 10px;
+    grid-area: price;
+}
 
   .contact-form-section {
       padding: 2rem;
@@ -513,13 +592,47 @@ footer a:hover {
       padding: 1.5rem;
   }
   
-  .gallery-grid {
-      grid-template-columns: repeat(3, 1fr); /* Three columns grid */
-  }
-  
-  .gallery-item {
-      padding: 1.5rem; /* Adjust padding for desktop */
-  }
+  #allgallerys {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#allgallerys div {
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: 
+    "photograph name"
+    "photograph description"
+    "photograph price";
+} 
+
+#allgallerys div img {
+    width: 300px;
+}  
+
+#allgallerys div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+}
+
+#allgallerys div img {
+    width: 100%;
+    grid-area: photograph;
+}
+
+#allgallerys div p {
+    margin: 1rem 10px;
+    grid-area: description;
+}
+
+#allgallerys div span {
+    margin: 1rem 10px;
+    grid-area: price;
+}
 
   .contact-form-section {
       max-width: 1000px;
@@ -546,4 +659,26 @@ footer a:hover {
       font-size: 1.1rem;
   }
 
+}
+
+/* Image Hover Effect for Larger Screens */
+@media (min-width: 641px) {
+    .gallery-card img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    /* Hover effect for images */
+    .gallery-card img:hover {
+        transform: scale(1.1); /* Zoom in effect */
+    }
+}
+
+/* No hover effect for small screens (Mobile View) */
+@media (max-width: 640px) {
+    .gallery-card img {
+        transition: none; /* Disable hover effect on small screens */
+    }
 }
