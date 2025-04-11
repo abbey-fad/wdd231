@@ -1,41 +1,95 @@
 // Data for the gallerys
 const gallerys = [
-      {
-        "name": "Slide1",
-        "price": "#8,000",
-        "description": "Size 42.",
-        "photo_link": "slide1.webp"
-      },
-      {
-        "name": "Sneaker 2",
-        "price": "$129.99",
-        "description": "Stylish sneaker with premium materials.",
-        "image": "images/product2.jpg"
-      },
-      {
-        "name": "Sneaker 3",
-        "price": "$89.99",
-        "description": "Affordable yet durable sneaker.",
-        "image": "images/product3.jpg"
-      },
-      {
-        "name": "Sneaker 4",
-        "price": "$109.99",
-        "description": "Sporty and comfortable for any workout.",
-        "image": "images/product4.jpg"
-      },
-      {
-        "name": "Sneaker 5",
-        "price": "$159.99",
-        "description": "Luxury sneaker with a sleek design.",
-        "image": "images/product5.jpg"
-      },
-      {
-        "name": "Sneaker 6",
-        "price": "$159.99",
-        "description": "Luxury sneaker with a sleek design.",
-        "image": "images/product5.jpg"
-      }
+  {
+    "name": "Slide",
+    "price": "#8,000",
+    "description": "Size 42.",
+    "photo_link": "slide1.webp"
+  },
+  {
+    "name": "Fashion Sport",
+    "price": "#6,500",
+    "description": "Size 34.",
+    "photo_link": "sport-fashion1.webp"
+  },
+  {
+    "name": "Adidas Sandal",
+    "price": "#15,000",
+    "description": "Size 44.",
+    "photo_link": "adidas-sandal.webp"
+  },
+  {
+    "name": "Prada Sandal",
+    "price": "#7,500",
+    "description": "Size 41.",
+    "photo_link": "prada-sandal.webp"
+  },
+  {
+    "name": "White Sneakers",
+    "price": "#11,000",
+    "description": "Size 38, 40, 41, 45",
+    "photo_link": "white-sneakers.webp"
+  },
+  {
+    "name": "Gucci",
+    "price": "#5,500",
+    "description": "Size 37 (Lite).",
+    "photo_link": "Gucci.webp"
+  },   
+  {
+    "name": "Soccer Boot",
+    "price": "#10,000",
+    "description": "Size 43.",
+    "photo_link": "soccer-boot.webp"
+  } ,  
+  {
+    "name": "Cotton Boxer",
+    "price": "#7,000",
+    "description": "4in1 cotton boxers (L).",
+    "photo_link": "cotton-boxer.webp"
+  },
+  {
+    "name": "Cufflinks",
+    "price": "#1,500",
+    "description": "Cufflinks.",
+    "photo_link": "cufflinks.webp"
+  },
+  {
+    "name": "Layers Top",
+    "price": "#4,500",
+    "description": "Armless",
+    "photo_link": "layers.webp"
+  },
+  {
+    "name": "Iky Singlet",
+    "price": "#8,000",
+    "description": "3in1 singlet.",
+    "photo_link": "lky-singlet.webp"
+  },
+  {
+    "name": "Roundneck Top",
+    "price": "#2,500",
+    "description": "White round neck (XL).",
+    "photo_link": "roundneck.webp"
+  },
+  {
+    "name": "Towel",
+    "price": "#5,000",
+    "description": "2in1 towel, Brown",
+    "photo_link": "towel.webp"
+  },
+  {
+    "name": "Suede Polish Spray",
+    "price": "#3,000",
+    "description": "black, Brown, Oxblood",
+    "photo_link": "shoe-polish.webp"
+  },
+  {
+    "name": "Powerbank",
+    "price": "#19,000",
+    "description": "20000mAh",
+    "photo_link": "powerbank.webp"
+  }
 ];
 
 // Function to display gallerys

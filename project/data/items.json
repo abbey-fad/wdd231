@@ -6,34 +6,46 @@
     "image": "slide1.webp"
   },
   {
-    "name": "Sneaker 2",
-    "price": "$129.99",
-    "description": "Stylish sneaker with premium materials.",
-    "image": "images/product2.jpg"
+    "name": "Fashion Sport",
+    "price": "#6,500",
+    "description": "Size 34.",
+    "image": "sport-fashion1.webp"
   },
   {
-    "name": "Sneaker 3",
-    "price": "$89.99",
-    "description": "Affordable yet durable sneaker.",
-    "image": "images/product3.jpg"
+    "name": "Adidas Sandal",
+    "price": "#15,000",
+    "description": "Size 44.",
+    "image": "adidas-sandal.webp"
   },
   {
-    "name": "Sneaker 4",
-    "price": "$109.99",
-    "description": "Sporty and comfortable for any workout.",
-    "image": "images/product4.jpg"
+    "name": "Prada Sandal",
+    "price": "#7,500",
+    "description": "Size 41.",
+    "image": "prada-sandal.webp"
   },
   {
-    "name": "Sneaker 5",
-    "price": "$159.99",
-    "description": "Luxury sneaker with a sleek design.",
-    "image": "images/product5.jpg"
+    "name": "White Sneakers",
+    "price": "#11,000",
+    "description": "Size 38, 40, 41, 45",
+    "image": "white-sneakers.webp"
   },
   {
-    "name": "Sneaker 6",
-    "price": "$159.99",
-    "description": "Luxury sneaker with a sleek design.",
-    "image": "images/product5.jpg"
+    "name": "Gucci",
+    "price": "#5,500",
+    "description": "Size 37 (Lite).",
+    "image": "Gucci.webp"
+  },   
+  {
+    "name": "Soccer Boot",
+    "price": "#10,000",
+    "description": "Size 43.",
+    "image": "soccer-boot.webp"
+  } ,  
+  {
+    "name": "Cotton Boxer",
+    "price": "#7,000",
+    "description": "4in1 cotton boxers (L).",
+    "image": "cotton-boxer.webp"
   }   
 ]
   
